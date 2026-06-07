@@ -40,7 +40,7 @@ def load_custom_css():
 
 load_custom_css()
 
-st.title("🧠 Autonomous Agent Workspace")
+st.title("🧠 ThirdEye Workspace")
 
 # --- CACHING LAYER ---
 @st.cache_resource
