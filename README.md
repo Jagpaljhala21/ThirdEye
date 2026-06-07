@@ -1,4 +1,4 @@
-# 🧠 Autonomous Cognitive Agent V1
+# 🧠 ThirdEYE V1
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.35.0-FF4B4B.svg)
