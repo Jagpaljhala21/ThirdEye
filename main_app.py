@@ -66,8 +66,10 @@ if st.button("Initialize Pipeline", type="primary"):
         col1, col2 = st.columns([1, 1])
 
         with col1:
-            with st.expander("🛠️ View Agent Execution Trace", expanded=False):
-                with st.status("Booting Cognitive Pipeline...", expanded=True) as status:
+            # We removed the st.expander line entirely!
+            with st.status("🛠️ Booting Cognitive Pipeline...", expanded=True) as status:
+                
+                    st.write("📡 Routing query to optimal model...")
                     
                     st.write("📡 Routing query to optimal model...")
                     routing_info = engines["router"].route(query)
