@@ -70,8 +70,6 @@ if st.button("Initialize Pipeline", type="primary"):
             with st.status("🛠️ Booting Cognitive Pipeline...", expanded=True) as status:
                 
                     st.write("📡 Routing query to optimal model...")
-                    
-                    st.write("📡 Routing query to optimal model...")
                     routing_info = engines["router"].route(query)
                     
                     st.write("🏗️ Synthesizing dynamic execution topology...")
