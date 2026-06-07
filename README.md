@@ -82,5 +82,5 @@ graph TD
 
 ### 1. Clone the repository
 ```bash
-git clone [https://github.com/YOUR_USERNAME/third-eye-agent.git](https://github.com/YOUR_USERNAME/third-eye-agent.git)
-cd third-eye-agent
+git clone [https://github.com/YOUR_USERNAME/Thirdeye.git](https://github.com/YOUR_USERNAME/Thirdeye.git)
+cd Thirdeye
