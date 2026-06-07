@@ -37,7 +37,7 @@ class RoutingWithLlama:
             ],
             temperature=0,
             response_format={"type": "json_object"},
-            max_completion_tokens=80
+            max_tokens=80
         )
         return json.loads(response.choices[0].message.content)
 
