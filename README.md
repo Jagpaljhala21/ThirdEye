@@ -82,5 +82,5 @@ graph TD
 
 ### 1. Clone the repository
 ```bash
-git clone [https://github.com/YOUR_USERNAME/Thirdeye.git](https://github.com/YOUR_USERNAME/Thirdeye.git)
-cd Thirdeye
+git clone https://github.com/Jagpaljhala21/ThirdEye.git
+cd ThirdEye
