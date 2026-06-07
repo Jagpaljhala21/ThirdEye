@@ -5,3 +5,4 @@ sentence-transformers==3.0.1
 faiss-cpu==1.14.2
 numpy==1.26.4
 groq==0.8.0
+dotenv
