@@ -1,0 +1,11 @@
+# Security
+.env
+
+# Local Memory & Cache
+memory_store/
+__pycache__/
+*.pyc
+
+# Local environments/libraries
+lib/
+third-eye/
