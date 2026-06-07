@@ -18,15 +18,54 @@ An advanced, self-correcting autonomous AI agent built with a Directed Acyclic G
 * **Safe & Optimized Execution:** Includes token truncation guards, infinite-loop breakers, and aggressive constraint prompting to ensure fast, lean inference.
 
 ---
+```mermaid
+graph TD
+    %% Styling Definitions
+    classDef user fill:#0E1117,stroke:#00CC96,stroke-width:2px,color:#FFF;
+    classDef core fill:#1E212B,stroke:#555,stroke-width:1px,color:#FFF;
+    classDef critic fill:#3B1C1C,stroke:#FF4B4B,stroke-width:2px,color:#FFF;
+    classDef memory fill:#112B22,stroke:#00CC96,stroke-width:2px,color:#FFF;
+    classDef output fill:#1E212B,stroke:#FFA421,stroke-width:2px,color:#FFF;
 
-## 🏗️ Architecture
+    %% Nodes
+    User(("🧑‍💻 User Input")):::user
+    UI["💻 Streamlit UI"]:::core
+    
+    Router{"📡 Cognitive Router"}:::core
+    Builder["🏗️ Graph Builder (NetworkX)"]:::core
+    Propagator["📊 Confidence Propagation"]:::core
+    
+    Executor(("⚙️ Graph Executor")):::core
+    Critic{"⚖️ Critic Engine"}:::critic
+    
+    Memory["🧠 Memory Manager"]:::memory
+    FAISS[("🗄️ FAISS Vector DB")]:::memory
+    
+    Visualizer["🌐 Interactive Visualizer"]:::output
+    Synthesis["📝 Final Synthesis"]:::output
 
-1. **User Input:** The user submits a complex prompt via the Streamlit UI.
-2. **Cognitive Router:** Assesses the prompt and routes it to the appropriate reasoning module.
-3. **Graph Builder:** Generates a topological DAG of sequential tasks (e.g., *Analysis -> Design -> Code -> Validation*).
-4. **Graph Executor & Critic:** Executes each node. The Critic evaluates the output. If flawed, it branches into a `(Revision)` node. If successful, it advances.
-5. **Memory Manager:** Synthesizes the final verified output and indexes it into the local FAISS vector database.
+    %% Flow
+    User -->|Prompt| UI
+    UI --> Router
+    Router -->|Routing Info| Builder
+    Builder -->|Initial DAG| Propagator
+    Propagator -->|Scored DAG| Executor
+    
+    %% Execution & Critic Loop
+    Executor -->|Node Output| Critic
+    Critic -.->|Fail: Trigger Revision Loop| Executor
+    Critic ==>|Pass: Confidence > Threshold| Memory
+    
+    %% Memory Interactions
+    Memory <-->|Semantic Search & Store| FAISS
+    Memory -->|Validated Output| Synthesis
+    
+    %% UI Rendering
+    Executor -->|Execution Trace| Visualizer
+    Visualizer -->|PyVis HTML| UI
+    Synthesis -->|Markdown| UI
 
+```
 ---
 
 ## 💻 Tech Stack
