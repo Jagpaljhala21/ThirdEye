@@ -1,4 +1,5 @@
 # 🧠 ThirdEYE V1
+demo- https://thirdeye-hvmmw66s6ysbj8zyxesvug.streamlit.app/
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.35.0-FF4B4B.svg)
